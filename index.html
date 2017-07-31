@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>hello angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+    
+     <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="model/app.factory.js"></script>
+    <script src="controllers/home.controller.js"></script>
+    <script src="controllers/about.controller.js"></script>
+    <script src="controllers/gallery.controller.js"></script>
+    <script src="controllers/contact.controller.js"></script>
+    
+
+</head>
+
+<body ng-app="test">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">AngularJS</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="about">About</a></li>
+                <li><a ui-sref="gallery">gallery</a></li>
+                <li><a ui-sref="contact">contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div ui-view>
+        hhh
+    </div>
+
+    <footer style="bottom:0;">
+        <h1>It's footer</h1>
+    </footer>
+</body>
+
+</html>
