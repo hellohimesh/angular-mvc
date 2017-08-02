@@ -1,0 +1,41 @@
+<div class="row container">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+         <form ng-submit="addTask(task)">
+            <input type="text" ng-model="task" required placeholder="name" class="form-control"> 
+            <div class="text-center" style="margin-top:10px" >       
+            <button class="btn btn-success" type="submit">Add submit</button> 
+            </div>
+         </form>
+         <ul class="list-group">
+            <li class="list-group-item" ng-repeat="x in tasks track by $index">{{$index+1}} )  {{x}} 
+               <span class="col-md-offset-3">
+                <button class="btn btn-danger" ng-click="deleteTask($index)">Delete</button>
+                </span>
+            </li>
+         </ul>
+    </div>
+
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th>ID</th>
+        <th>Name</th>
+        <th>phone</th>
+        <th>address</th>
+        <th>dob</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "x in students">
+          <td>{{$index+1}}</td>
+          <td>{{x.name}}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.address}}</td>
+        <td>{{x.dob}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+</div>
+

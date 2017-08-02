@@ -1,0 +1,10 @@
+<div class="jumbotron">
+    <h1>about</h1>
+</div>
+ <ul class="list-group">
+            <li class="list-group-item" ng-repeat="x in tasks track by $index">{{$index+1}} )  {{x}} 
+               <span class="col-md-offset-3">
+                <button class="btn btn-danger" ng-click="deleteTask($index)">Delete</button>
+                </span>
+            </li>
+         </ul>
